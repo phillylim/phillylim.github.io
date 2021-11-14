@@ -1,223 +1,209 @@
-# Devfolio
+# Neumorphism <!-- omit in toc -->
 
-![Preview](https://user-images.githubusercontent.com/9112801/96329524-c8906600-101b-11eb-8fd8-4d45e7f0cd1b.jpg)
+> Neumorphism designed Jekyll theme for personal websites, portfolios and resumes.
 
-Devfolio is a modern and production-ready personal portfolio and blog template built on GatsbyJS and styled with TailwindCSS. Easily show off your projects, experience, and skills, as well as write blog posts showcasing your knowledge.
+* Featured on [JAMstack Themes](https://jamstackthemes.dev/theme/jekyll-neumorphism/)
+* Featured on [Jekyll Themes](https://jekyll-themes.com/neumorphism/)
+* Featured on [jekyllthemes](http://jekyllthemes.org/themes/neumorphism/)
 
-Some of the features include:
+[![Open Issues](https://badgen.net/github/open-issues/longpdo/neumorphism)](https://github.com/longpdo/neumorphism/issues)
+[![License](https://badgen.net/github/license/longpdo/neumorphism)](LICENSE)
+<a href="https://jekyll-themes.com">
+    <img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
+</a>
 
-- Built with React on GatsbyJS (however, no React knowledge required)
-- Styled with Tailwind
-- Simple Configuration
-- Production-ready & Deployable in Seconds
-- Write Blog Posts in Markdown (with Syntax Highlighting)
-- Mobile Friendly
-- Extend and Customize as Needed
-- Blazing Fast 🙄
+[View Demo](https://longpdo.github.io/neumorphism/) · [Report Bug](https://github.com/longpdo/neumorphism/issues) · [Request Feature](https://github.com/longpdo/neumorphism/issues)
 
-**[Need help with the template or have suggestions? Reach out on Twitter anytime!](https://twitter.com/rfitzio)**
+<!-- TABLE OF CONTENTS -->
+## Table of Contents <!-- omit in toc -->
 
-## Demo
+* [About The Project](#about-the-project)
+  * [Built With](#built-with)
+  * [Features](#features)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+  * [Personalize and Customize](#personalize-and-customize)
+    * [_config.yml](#_configyml)
+    * [Github Metadata Plugin](#github-metadata-plugin)
+    * [_data/*.yml](#_datayml)
+    * [Particles.js](#particlesjs)
+* [Contributing](#contributing)
+* [License](#license)
+* [Acknowledgements](#acknowledgements)
 
-For a live demo of the base template, [click here](https://elastic-meninsky-aa7c74.netlify.app/).
+<!-- ABOUT THE PROJECT -->
 
-For a live demo of a slightly customized version of the template (my own personal site), [click here](https://rfitz.io).
+## About The Project
 
-## Contents
+[![Project Screenshot][product-screenshot]](https://longpdo.github.io/neumorphism/)
 
-- [Adding Your Information](#adding-your-information)
-  - [General](#general)
-  - [About Me](#about-me)
-  - [Projects](#projects)
-  - [Experience](#experience)
-  - [Skills](#skills)
-- [Setting Up The Blog](#setting-up-the-blog)
-- [Running Locally](#running-locally)
-- [Deploying](#deploying)
-- [Customization](#customization)
-- [Contributing](#contributing)
-- [License](#license)
+This is a personal website built with `Jekyll` and hosted on `Github Pages`, which is based on the new `Neumorphism` design trend and was developed with a mobile-first approach. This can be used by developers, who want to showcase their resume and portfolio. If you want to use this for your own website, fork this repository and then refer to [personalize and customize](#personalize-and-customize).
 
-## Adding Your Information
+### Built With
 
-To get started, either fork or clone the repo. Next, open `gatsby-config.js` which has configuration options under `siteMetadata`. The config comes with some default example content and code comments to make it easy to understand how to set it up. The following provides a more in-depth explanation of each section:
+* [Jekyll](https://jekyllrb.com/)
 
-### General
+### Features
 
-| Option        | Description                  | Required |
-| ------------- | ---------------------------- | -------- |
-| `siteUrl`     | The URL of your site         | Yes      |
-| `name`        | Your name                    | Yes      |
-| `title`       | The title of your site       | Yes      |
-| `description` | The description of your site | Yes      |
-| `author`      | Your Twitter Handle          | No       |
-| `github`      | Your GitHub Profile URL      | No       |
-| `linkedin`    | Your LinkedIn Profile URL    | No       |
+* Mobile-First Responsive Design
+* Animated preloader animation
+* Landing Page with animated background with [particles.js](https://vincentgarreau.com/particles.js/), a Typing Carousel and animated social icons
+* Dark Neumorphism Design on main content
+* [Animations On Scroll](https://michalsnik.github.io/aos/)
+* Filterable *Skills* word cloud
+* [Github's API](https://developer.github.com/v3/) automatically populating the *Open Source Projects* section
+* Gulp dev workflow with [BrowserSync](https://browsersync.io/), [Autoprefixer](https://autoprefixer.github.io/) and `JS` & `SCSS` minifying.
+* [Google Analytics](https://analytics.google.com/)
 
-### About Me
+<!-- GETTING STARTED -->
 
-The _About Me_ section is defined under `about` and is a simple string type. This section is required.
+## Getting Started
 
-### Projects
+To get a local copy up and running follow these simple steps.
 
-The _Projects_ section is defined as an array under the `projects` key in the config and is optional. Projects have the following format:
+`The commands and instructions I provide are for MacOS - please look up the specific commands for your OS on your own.`
 
-```js
-{
-  name: 'Devfolio', // Required
-  description: 'A zero-config and blazing fast personal site + blog built with GatsbyJs and TailwindCSS', // Required
-  link: 'https://github.com/RyanFitzgerald/devfolio', // Optional
-}
+### Prerequisites
+
+* [NodeJS](https://nodejs.org/en/)
+
+```sh
+brew install node
 ```
 
-### Experience
+If you need to switch between Node versions regurlarly, I would recommend to install Node via [Node Version Manager](https://github.com/nvm-sh/nvm/blob/master/README.md#manual-install).
 
-The _Experience_ section is defined as an array under the `experience` key in the config and is optional. Experience items have the following format:
+* [Jekyll](https://jekyllrb.com/)
 
-```js
-{
-  name: 'Hooli', // Required
-  description: 'Full-Stack Developer, May 2015 - December 2017', // Required
-  link: 'https://github.com/RyanFitzgerald/devfolio', // Optional
-},
+```sh
+gem install bundler jekyll
 ```
 
-### Skills
+For more information, refer to [this](https://jekyllrb.com/docs/installation/).
 
-The _Skills_ section is defined as an array under the `skills` key in the config and is optional. Skills have the following format:
+* [Yarn](https://yarnpkg.com/)
 
-```js
-{
-  name: 'Languages & Frameworks',
-  description: 'JavaScript (ES6+), Golang, Node.js, Express.js, React, Ruby on Rails, PHP',
-},
+```sh
+npm install -g yarn
 ```
 
-## Setting Up The Blog
+### Installation
 
-The blog is an optional portion of the template and the content for it exists in the `content/blog` folder. All blog posts are written in Markdown by default and the template ships with a couple sample posts so you can get an idea of what's possible (i.e. syntax highlighting). If you'd rather not have a blog, simply delete the sample posts inside the folder while ensuring that the folder itself (`content/blog`) is kept as Gatsby still looks for it (you may also need to add `.gitkeep` to the folder so git recognizes it). If there are no posts in the folder, you will not see a Blog link at the top nor will you see the _Latest Posts_ section on the homepage. Once you add your first post, this will re-appear.
+> Recommended way: If you want to contribute to this theme or open issues due to problems implementing this on your own, I would recommend forking the repository directly. This makes it easier for me to solve open issues and questions or check pull requests.
 
-### Adding a New Blog Post
+1.1: Fork the repository (using the `Fork` button at the top) and then clone the repository
 
-To create a new blog post, create a new folder in `content/blog` with the name being the URL you want for the blog post. For example, if you create a folder `content/blog/hello-world`, the resulting path to your blog post will be `mysite.com/blog/hello-world`.
-
-Next, create an `index.md` file in the new folder with the following at the top of the file (including the lines):
-
-```
----
-title: My Blog Title
-date: '2020-09-20T12:00:00.00Z'
-description: 'Some Short Blog Post Description'
----
-
-My blog post starts here.
+```sh
+# Replace {YOUR_USERNAME} with your actual username
+git clone https://github.com/{YOUR_USERNAME}/neumorphism.git
 ```
 
-The portion between both lines (`---`) is the metadata for the blog post. The `title` attribute is the post's title, the `date` is the date that shows on the blog post, and the `description` is a brief excerpt of the post that shows on the home page and the blog page for the post summary. Below the metadata is where the content of your blog post would start.
+or
 
-After that is done, you should now see you're latest blog post on your site (if you deploy or run it locally). One thing to keep in mind is that by default, the homepage will show only the latest 5 blog posts based on the `date` field entered. If you added a new blog post but it's not showing up, it's possible that you entered an older date by accident.
+1.2: Create your own repository (using the green `Use this template` button at the top) and then clone the repository
 
-## Running Locally
-
-If you're happy with the current layout and design, you can simply edit your `gatsby-config.js` without the need to run it locally. With that said, if you want to spin it up locally, simply run `npm install` to install the required dependencies and then `npm run develop` to start the Gatsby development server. You can also run `npm run format` to run Prettier on the code.
-
-## Deploying
-
-Devfolio is a fully static website by default, so the deployment options are fairly endless. Regardless of the deployment method, the same general idea applies. You first build the static production site by running `npm run build` and then deploy the resulting static assets wherever you want.
-
-With that said, some deployment options are even easier so I will provide a couple examples below:
-
-### Netlify
-
-My deployment source of choice is [Netlify](https://www.netlify.com/) and is where my own [personal site](https://rfitz.io) is hosted. They have a Free Plan and automatically deploy changes to your `master` branch if you connect with GitHub or GitLab.
-
-For the easiest setup possible, simply click:
-
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/RyanFitzgerald/devfolio"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Netlify"/></a>
-
-If you'd rather run through the steps manually, start by creating a free Netlify account with your GitHub.
-
-Next, click **New Site From Git** and click **GitHub** (or another) as the provider.
-
-After that, select the repository where you cloned this into. If you don't see it, you may need to configure the Netlify App on Github via the link they provide.
-
-![Netlify Step 2](https://user-images.githubusercontent.com/9112801/96353255-4bef9d00-1098-11eb-88ba-1ae7a4cec8d3.png)
-
-Finally, ensure that it set the _Basic Build Settings_ correctly. You want to ensure that the **Build Command** is set to `gatsby build` and the **Publish Directory** is set to `public/`. Once complete, click **Deploy Site** and you should be good to go!
-
-### Vercel
-
-Another straightforward way to deploy devfolio is to use [Vercel](https://vercel.com/). The platform also offers a Hobby plan that will allow you to host the project free-of-charge.
-
-You can deploy devfolio with just a few clicks:
-
-<a href="https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FRyanFitzgerald%2Fdevfolio&project-name=devfolio&repository-name=devfolio"><img src="https://vercel.com/button" alt="Vercel"/></a>
-
-As with Netlify, the deployment can be also done manually following identical settings.
-
-### GitHub Pages
-
-If you'd like, you can setup a build pipeline fairly easily that allows you to use GitHub Pages. To find more information, [read this guide](https://www.gatsbyjs.com/docs/how-gatsby-works-with-github-pages/).
-
-### Other
-
-If you want to learn more about the many other options to deploy, take a look at the [Deploying & Hosting](https://www.gatsbyjs.com/docs/deploying-and-hosting/) section of the GatsbyJS docs where they go through examples on how to deploy on Gatsby Cloud, Azure, AWS Amplify, AWS S3, and many more.
-
-## Customization
-
-Although Devfolio is fully production-ready out of the box, it was also made with customization in mind.
-
-### Gatsby Customization
-
-Devfolio is built on GatsbyJS, so it comes with all the benefits of it. You can make use of the thousands of Gatsby Plugins, utilize the Gatsby APIs (SSR, Browser, etc), and much more. For more information, check out [their great docs](https://www.gatsbyjs.com/docs/).
-
-### Adding or Updating Components
-
-GatsbyJS is based on React, so the template uses a bunch of React components behind the scenes. These components can be found in `src/components` in case you wish to create more or edit the current ones. With the exception of a couple GatsbyJS-specific components being imported, everything else is traditional React.
-
-One thing to note is that if you wish to query data in one of the components, you can do so with the `<StaticQuery/>` component that comes with GatsbyJs. For more information, [click here](https://www.gatsbyjs.com/docs/static-query/#reach-skip-nav).
-
-### Adding or Updating Pages
-
-The pages for the template exist in `src/pages` and are simply React components that get treated as pages by GatsbyJS. By default, the following pages exist in the template:
-
-- `src/pages/index.jsx` - the main homepage
-- `src/pages/blog.jsx` - the main `/blog` homepage
-- `src/pages/404.jsx` - the default 404 page
-
-You can easily modify those pages and create new ones. Gatsby core automatically takes any React component in `src/pages/*` and turns it into a separate page (they must export a component as a default export). For example, if you make a new component as `src/pages/page1.jsx`, it will automatically create a new page that can be visited via `mysite.com/page1`. For more information on pages as well as other ways they can be created, [click here](https://www.gatsbyjs.com/docs/creating-and-modifying-pages/).
-
-### Adding or Updating Styles
-
-Devfolio is fully styled with [TailwindCSS](https://tailwindcss.com/) with the exception of a couple minor additional styles, as found in `src/css/index.css`.
-
-When the GatsbyJS development server is running, you'll have access to all of the Tailwind styles, however once you deploy (i.e. build the static assets), PurgeCSS runs against them and only leaves the Tailwind styles that were actually used. This is beneficial because it keeps the build size considerably smaller, however there are some important considerations to keep in mind in order to keep the HTML purgeable. For example, if you use string concatenation to create a class name, PurgeCSS won't be able to figure out what that is. For more information on writing purgeable HTML + other methods to control file size, [click here](https://tailwindcss.com/docs/controlling-file-size).
-
-The pattern current used in the template when it comes to writing React components with Tailwind CSS is as follows:
-
-```jsx
-const classes = {
-  wrapper: 'm-12 p-12',
-  text: 'text-lg text-gray-600 font-light',
-};
-
-const MyComponent = () => {
-  return (
-    <div className={classes.wrapper}>
-      <p className={classes.text}>Some text here.</p>
-    </div>
-  );
-};
+```sh
+# Replace {YOUR_USERNAME}, {YOUR_REPOSITORY} with the actual values
+git clone https://github.com/{YOUR_USERNAME}/{YOUR_REPOSITORY}.git
 ```
 
-All the possible classes are defined above and just referenced in the `className` attribute of each element. This comes with a couple benefits:
+2: Change directory into neumorphism
 
-1. It keeps the overall component definition slightly cleaner (i.e. there isn't a huge class string)
-2. You can reuse styles a little easier
-3. This still qualifies as purgeable HTML (assuming the class is actually used)
+```sh
+cd neumorphism
+```
 
-This is however just a recommendation, the template allows you to write the components in any way you wish.
+3: Install dependencies
+
+```sh
+yarn
+```
+
+<!-- USAGE EXAMPLES -->
+
+## Usage
+
+* Run and develop locally with live server at `http://localhost:4000`, this will also build production-ready `JS` and `SCSS` assets with every change
+
+```sh
+gulp
+```
+
+* After committing and pushing, see the `Settings` page of your repository to see where your site is published at via `Github Pages`.
+
+### Personalize and Customize
+
+#### _config.yml
+
+Edit `_config.yml` to personalize your site. For documentation, refer to [docs/config.md](https://github.com/longpdo/neumorphism/blob/master/docs/config.md).
+
+#### Github Metadata Plugin
+
+If you want to automatically have your Github repositories pulled for the *Open Source Projects* section, then you also need to authenticate yourself for the Github Metadata plugin to work.
+
+You need to generate a new personal access token on GitHub:
+
+* Go to the [Github Token site](https://github.com/settings/tokens/new)
+* Select the scope `public_repository`, and add a description.
+* Confirm and save the settings. Copy the token you see on the page.
+* Create a `.env` file inside your repository and add your generated `JEKYLL_GITHUB_TOKEN`:
+
+```text
+JEKYLL_GITHUB_TOKEN=0YOUR0GENERATED0TOKEN0
+```
+
+To complete the configuration for the Github Metadata plugin, you also need to change the value of `repository` inside `_config.yml`. After this, you should the Github Metadata plugin should work properly.
+
+For optimal results, you should make sure, that every Github project, you want included on this portfolio, has added following informations on Github:
+
+* Description
+* Homepage link, if there is a live version of it
+* Topics
+
+Example:
+![Github Repository Information Example][github-repo-info]
+
+#### _data/*.yml
+
+Edit files inside `_data` to add information to the portfolio. For documentation, refer to [docs/data.md](https://github.com/longpdo/neumorphism/blob/master/docs/data.md).
+
+#### Particles.js
+
+Edit `assets/particles.json` to customize the landing page backgorund animation. For more information, refer to [this](https://github.com/VincentGarreau/particles.js/#options).
+
+<!-- CONTRIBUTING -->
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<!-- LICENSE -->
 
 ## License
 
-Licensed under the [MIT License](https://github.com/RyanFitzgerald/devfolio/blob/master/LICENSE.md).
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## Acknowledgements
+
+* [Font Awesome](https://fontawesome.com/)
+* [Normalize.css](https://necolas.github.io/normalize.css/)
+* Based Preloader on [Codrin Pavel's](https://codepen.io/zerospree/pen/aCjAz) version
+* Typing Carousel by [Gregory Schier](https://codepen.io/gschier/pen/jkivt)
+* Social Button Animation by [Stéphane Lyver](https://codepen.io/wouwi/pen/Lwrmi)
+* Adapted [Damian Jankowski's](https://codepen.io/dolaron/pen/rNadmOE) color palette for the neumorphism design
+* Based Timeline on [Krishna Babu's](https://codepen.io/krishnab/pen/OPwqbW) version
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[product-screenshot]: https://raw.githubusercontent.com/longpdo/neumorphism/master/docs/screenshot.gif
+[github-repo-info]: https://raw.githubusercontent.com/longpdo/neumorphism/master/docs/github-repo-info.png
