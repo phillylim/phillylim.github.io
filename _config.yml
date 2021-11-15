@@ -15,6 +15,20 @@ github_username:  phillylim
 gplus_username:
 linkedin_username: phillylim
 
+show_aboutme_card: true
+about_me_title: About Me
+about_me_description: 
+
+show_skills_card: true
+timeline_title: Timeline
+cv_download_link: 
+
+show_projects_card: true
+
+show_contact_card: true
+contact_title: Philly Lim
+contact_description:
+
 # Google-analytics
 google-analytics:
   id: ""
